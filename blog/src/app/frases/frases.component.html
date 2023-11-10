@@ -1,0 +1,18 @@
+<h1>Frases</h1>
+<form>
+    <div>
+        <input (click)="filtrarFrases('Amor')" type="radio" name="frase" id="Amor">
+        <label for="Amor">Frases de Amor</label>
+    </div>
+    <div>
+        <input (click)="filtrarFrases('Motivacionais')" type="radio" name="frase" id="Motivacionais">
+        <label for="Motivacionais">Frases Motivacionais</label>
+    </div>
+    <div>
+        <input (click)="filtrarFrases('Felicidade')" type="radio" name="frase" id="Felicidade">
+        <label for="Felicidade">Frases de Felicidade</label>
+    </div>
+</form>
+<div *ngFor="let frases of listaDeFrasesFiltradas" class="frases">
+    <p>{{frases.frase}}</p>
+</div>
